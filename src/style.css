@@ -1,7 +1,5 @@
 body {
-  background: url("img/Mocktail.jpeg");
-  background-size: cover;
-  opacity: 0.7;
+  background: rgb(25, 152, 152);
   font-family: Helvetica, Arial, sans-serif;
 }
 
