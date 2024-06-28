@@ -1,5 +1,5 @@
 body {
-  background-image: url("img/Mocktail.jpeg");
+  background: url("img/Mocktail.jpeg");
   background-size: cover;
   opacity: 0.7;
   font-family: Helvetica, Arial, sans-serif;
