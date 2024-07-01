@@ -1,28 +1,28 @@
-function displayMocktail(response) {
-  new Typewriter("#mocktail", {
+function displayRecipe(response) {
+  new Typewriter("#recipe", {
     strings: response.data.answer,
     autoStart: true,
     delay: 1,
-    cursor: "",
+    cursor: " ",
   });
 }
 
-function generateMocktail(event) {
+function generateRecipe(event) {
   event.preventDefault();
 
   let instructionsInput = document.querySelector("#user-instructions");
   let apiKey = "33ftabad4a7f60213o971b6848003fd4";
   let context =
     "You are a bartender experienced in mocktails. Your mission is to create an easy mocktail recipe and separate each line with a <br />. Make sure to follow the user instructions.";
-  let prompt = `User instructions: Generate a Mocktail recipe with ${instructionsInput.value}`;
+  let prompt = `User instructions: Generate a mocktail recipe with ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt={prompt}&context={context}&key={apiKey}`;
 
-  let mocktailElement = document.querySelector("#mocktail");
-  mocktailElement.classList.remove("hidden");
-  mocktailElement.innerHTML = `<div class="generating">⏳ Generating a Mocktail with ${instructionsInput.value}</div>`;
+  let recipeElement = document.querySelector("#recipe");
+  recipeElement.classList.remove("hidden");
+  recipeElement.innerHTML = `<div class="generating">⏳ Generating a mocktail recipe with ${instructionsInput.value}</div>`;
 
-  axios.get(apiURL).then(displayMocktail);
+  axios.get(apiURL).then(displayRecipe);
 }
 
-let mocktailFormElement = document.querySelector("#mocktail-generator-form");
-mocktailFormElement.addEventListener("submit", generateMocktail);
+let recipeFormElement = document.querySelector("#recipe-generator-form");
+recipeFormElement.addEventListener("submit", generateRecipe);
