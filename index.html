@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Mocktails</title>
   </head>
   <body>
     <div class="container">
+      <header>
       <h1>Welcome to the AI Mocktail Generator</h1>
+      </header>
       <main>
+      <div class="form-container">
         <form id="mocktail-generator-form">
           <input
               type="text"
@@ -26,7 +31,7 @@
           <div class="hint">i.e: Orange juice, Eldeflower or Mango</div>
         </div>
         <div class="mocktail hidden" id="mocktail"></div>
-        </form>
+      </div>
         <div class="mocktail">
         </div>
       </main>
