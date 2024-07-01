@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Mocktails</title>
   </head>
@@ -14,16 +13,22 @@
       <main>
         <form id="mocktail-generator-form">
           <input
-            type="text"
-            placeholder="Enter the main ingredient"
-            autofocus
-            required
-            autocomplete="off"
-          />
-          <input type="submit" />
+              type="text"
+              placeholder="Enter the topic of a French poem"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-instructions"
+            />
+          <input type="submit" class="submit-button" />
+          </form>
+          <div class="hint">i.e: Orange juice, Eldefrower or Mango</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
         </form>
         <div class="mocktail">
-          <div>Orange juice</div>
+          <div> </div>
         </div>
       </main>
 
