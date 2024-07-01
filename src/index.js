@@ -17,7 +17,7 @@ function generateMocktail(event) {
   let prompt = `User instructions: Generate a Mocktail recipe with ${instructionsInput.value}`;
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  let mocktailElement = document.querySelector("#poem");
+  let mocktailElement = document.querySelector("#mocktail");
   mocktailElement.classList.remove("hidden");
   mocktailElement.innerHTML = `<div class="generating">⏳ Generating a Mocktail with ${instructionsInput.value}</div>`;
 
